@@ -1,0 +1,5 @@
+Menu:
+Display menu options,
+ask for user choice,
+store choice in variable,
+if user chooses one

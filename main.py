@@ -51,16 +51,58 @@ def solutions_report():
 
  # Add data processing functions here
 def load_dataset():
+     global df
      df = pd.read_csv("data/water_potability.csv")
-      
-
+     df.rename(columns={
+    "ph":"Ph",
+    "Organic_carbon":"Organic Carbon"
+})
 
 load_dataset()
 
+
 # Add analysis functions here 
 
+def basic_stats():
+    print(df.describe())
 
+def find_average():
+    print(df.mean)
+    
+def find_count():
+    print(df.count)
 
+def find_std():
+    print(df.std)
+
+def find_min():
+    print(df.min)
+
+def find_max():
+    print(df.max)
+
+def view_ph_data():
+    print(df["ph"].describe())
+view_ph_data()
+
+def view_hardness():
+    print(df["Hardness"].describe())
+
+def view_solids():
+    print(df["Solids"].describe())
+
+def view_chloramines():
+    print(df["Chloramines"].describe())
+
+def view_sulfates():
+    print(df["Sulfate"].describe())
+
+def view_conductivity():
+    print(df["Conductivity"].describe())
+
+def view_organic_carbon():
+    print(df["Organic Carbon"].describe())
+view_organic_carbon()
 # Add interactive features and menus here
 
 
