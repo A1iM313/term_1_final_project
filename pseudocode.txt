@@ -2,4 +2,6 @@ Menu:
 Display menu options,
 ask for user choice,
 store choice in variable,
-if user chooses one
+if user chooses one of the options, enter submenu,
+display submenu options,
+repeat steps 1-6 for each submenu.

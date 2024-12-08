@@ -1,12 +1,16 @@
 # Enter description here
 # This is a program to analyze water potability dataset, display visualizations, and generate solutions for low potability.
-# It will interact with the user through a CLI and
+# It will interact with the user through a CLI and allow flec
 # 
 #
 #
 # Add imports here
 import pandas as pd
-import matplotlib as plt
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+from simple_term_menu import TerminalMenu
+
 
 
 # Put constants and configuration here
@@ -65,6 +69,8 @@ load_dataset()
 
 def basic_stats():
     print(df.describe())
+    print(df.info())
+basic_stats()
 
 def find_average():
     print(df.mean)
@@ -82,12 +88,13 @@ def find_max():
     print(df.max)
 
 def view_ph_data():
-    print(df["ph"].describe())
-view_ph_data()
+    print(df["Ph"].describe())
 
 def view_hardness():
     print(df["Hardness"].describe())
 
+
+# This is the data category that is the issue
 def view_solids():
     print(df["Solids"].describe())
 
@@ -102,14 +109,34 @@ def view_conductivity():
 
 def view_organic_carbon():
     print(df["Organic Carbon"].describe())
-view_organic_carbon()
+
+def view_trihalomethanes():
+    print(df["Trihalomethanes"].describe())
+
+def view_turbidity():
+    print(df["Turbidity"].describe())
+
+def view_potability():
+    print(df["Potability"].describe())
+
+  
 # Add interactive features and menus here
+# def interactive_main():
+#     options = ["1. View Potability Analysis", "2. Visualize Data", "3. Generate Solutions Report"]
+#     terminal_menu = TerminalMenu(options)
+#     menu_entry_index = terminal_menu.show
+#     print(f"You have selected {options[menu_entry_index]}!")
 
-
+# if __name__ == "__main__":
+#     interactive_main()
 
 # Add Visualization functions here
-
-
+#This is the bar chart that I am having issues with
+sns.set_theme()
+def summary_bar_graph():
+    sns.barplot(data=df)
+    plt.show()
+summary_bar_graph()
 
 
 # Add main program functions here
