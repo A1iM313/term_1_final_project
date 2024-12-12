@@ -5,3 +5,14 @@ store choice in variable,
 if user chooses one of the options, enter submenu,
 display submenu options,
 repeat steps 1-6 for each submenu.
+
+
+
+
+
+while loop
+menu != 4 
+if statement
+if menu == 4 then exit while loop and program
+
+it prints the test word on repeat now matter which option i choose including 4
